@@ -1,11 +1,6 @@
-import { provideRouter, withHashLocation } from '@angular/router'; // <-- Añadir 'withHashLocation'
-import { routes } from './app/app.routes';
-// ...
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { App } from './app/app';
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    // Añade withHashLocation() aquí
-    provideRouter(routes, withHashLocation()) // <-- ¡Esta es la línea clave!
-    // ... otros providers
-  ]
-})
+bootstrapApplication(App, appConfig)
+  .catch((err) => console.error(err));

@@ -1,5 +1,6 @@
 // src/app/app.ts (Versión COMPLETA Y FUNCIONAL)
 
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
